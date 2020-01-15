@@ -97,3 +97,14 @@
   transform-style: $property;
   -webkit-transform-style: $property;
 }
+
+@mixin visited-urls {
+  a {
+    &:focus,
+    &:visited,
+    &:link {
+      text-decoration: none;
+      color: inherit;
+    }
+  }
+}

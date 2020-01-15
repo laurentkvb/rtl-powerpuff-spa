@@ -25,10 +25,10 @@ export function transformData(data) {
       {},
       {
         id: data.id,
-        name: data.name,
-        summary: data.summary,
-        image: data.image.original,
-        episodes: data._embedded.episodes
+          episodes: data._embedded.episodes,
+          name: data.name,
+          summary: data.summary,
+          image: data.image.original
       }
   );
 }

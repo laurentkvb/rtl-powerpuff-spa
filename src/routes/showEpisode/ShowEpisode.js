@@ -1,8 +1,8 @@
-import React, {useEffect} from 'react';
+import React, { useEffect } from 'react';
 import './showEpisode.scss';
-import {useDispatch, useSelector} from 'react-redux';
-import {retrieveEpisodeFromShow} from '../../store/actions';
-import {RichText} from '../../components/richText/RichText';
+import { useDispatch, useSelector } from 'react-redux';
+import { retrieveEpisodeFromShow } from '../../store/actions';
+import { RichText } from '../../components/richText/RichText';
 import EpisodeImage from '../../components/image/EpisodeImage';
 
 export const ShowEpisode = ({ match }) => {
@@ -21,6 +21,7 @@ export const ShowEpisode = ({ match }) => {
         <a href={episode.url}>
           <EpisodeImage image={episode.image} name={episode.name} />
         </a>
+        <p>Click on the image to go to the episode..</p>
 
         <h2>{episode.name}</h2>
         <h4>

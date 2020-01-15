@@ -6,14 +6,7 @@
 
   @include fadein-animation;
 
-  a {
-    &:focus,
-    &:visited,
-    &:link {
-      text-decoration: none;
-      color: inherit;
-    }
-  }
+ @include visited-urls;
 
   h2,
   h4 {

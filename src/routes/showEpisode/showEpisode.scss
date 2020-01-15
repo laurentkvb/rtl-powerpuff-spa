@@ -1,7 +1,13 @@
+@import '../../components/styles/mixins';
 
 .show-episode {
   margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 
+  @include visited-urls;
   p{
     margin: 40px;
   }

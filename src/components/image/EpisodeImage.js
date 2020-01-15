@@ -1,4 +1,5 @@
 import React from 'react';
+import "./episodeImage.scss"
 
 export const EpisodeImage = ({ image, name }) => {
   if (image && image.medium) {
@@ -6,7 +7,7 @@ export const EpisodeImage = ({ image, name }) => {
   }
 
   return (
-    <div className="episode-episode__image-not-found">
+    <div className="episode-image__not-found">
       <p>Image not found</p>
     </div>
   );

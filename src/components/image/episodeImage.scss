@@ -1,0 +1,23 @@
+@import '../styles/mixins';
+
+
+.episode-image{
+
+  &__not-found {
+    width: 300px;
+    height: 178px;
+    display: flex;
+    background-color: lightgrey;
+    justify-content: center;
+    flex-direction: column;
+
+    @include visited-urls;
+
+    p {
+      @include visited-urls;
+
+      text-align: center;
+      color: white;
+    }
+  }
+}
