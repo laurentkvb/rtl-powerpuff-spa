@@ -1,5 +1,5 @@
 export const Route = {
     HOME: "/",
-    EPISODE: "/episodes/:id"
+    EPISODE_DETAIL_PAGE: "/episodes/:id"
 };
 

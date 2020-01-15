@@ -1,33 +1,41 @@
 import React from 'react';
 import './showOverview.scss';
-import { Item } from '../../components/item/Item';
+
+import { useSelector } from 'react-redux';
+import { EpisodeItem } from '../../components/item/EpisodeItem';
+import { RichText } from '../../components/richText/RichText';
 
 export const ShowOverview = () => {
-  const data = [
-    {
-      title: 'The girly girl',
-      description: 'Lorem ipsum',
-    },
-    {
-      title: 'The man',
-      description: 'Lorem ipsum',
-    },
-  ];
+  const show = useSelector(state => state.show);
 
-  return (
-    <div className="show-overview">
-      <h1>Hello</h1>
+  console.log('show');
+  console.log(show);
+  console.log(show.image);
+  if (show) {
+    return (
+      <div className="show-overview">
 
-      <div className="show-overview__box">
+             <h1>{show.name}</h1>
 
-      {data.map((value, index) => (
-        <Item item={value} key={index} />
-      ))}
 
+        <div className="show-overview__description">
+
+          <RichText text={show.summary} variant="small"/>
+            <img alt={show.name} src={show.image}/>
+
+        </div>
+
+        <div className="show-overview__box">
+          {show &&
+            show.episodes &&
+            show.episodes.map((value, index) => (
+              <EpisodeItem item={value} key={index} />
+            ))}
+        </div>
       </div>
-
-    </div>
-  );
+    );
+  }
+  return null;
 };
 
 export default ShowOverview;
