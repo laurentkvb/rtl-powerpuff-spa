@@ -1,0 +1,57 @@
+@import '../styles/mixins';
+
+.episode-item {
+  margin: 40px;
+  width: 300px;
+
+  @include fadein-animation;
+
+
+  a {
+    &:focus,
+    &:visited,
+    &:link {
+      text-decoration: none;
+      color: inherit;
+    }
+  }
+
+  h2,
+  h4 {
+    margin-left: 10px;
+    text-align: left;
+  }
+
+  h2{
+    height: 40px;
+  }
+
+  h4 {
+    color: grey;
+  }
+
+  img {
+    width: 100%;
+  }
+
+  @include box-shadow(-2px 0 20px rgba(#777, 0.5));
+  @include transition(all 0.2s ease-in-out);
+
+  &:hover {
+    @include transform(translate(5px, -5px));
+    @include box-shadow(-4px 2px 20px rgba(#777, 0.15));
+  }
+
+  &__image-not-found {
+    width: 300px;
+    height: 178px;
+    display: flex;
+    background-color: lightgrey;
+    justify-content: center;
+    flex-direction: column;
+    p {
+      text-align: center;
+      color: white;
+    }
+  }
+}
