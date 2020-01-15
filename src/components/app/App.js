@@ -5,13 +5,13 @@ import { Provider } from 'react-redux';
 import Header from '../header/Header';
 import { Router } from '../router/Router';
 
-import store from "../../store/store";
-import {fetchShowById} from "../../store/actions";
+import store from '../../store/store';
+import { fetchShowById } from '../../store/actions';
 
 const App = () => {
-    useEffect(() => {
-        store.dispatch(fetchShowById('6771'));
-    }, []);
+  useEffect(() => {
+    store.dispatch(fetchShowById('6771'));
+  }, []);
 
   return (
     <Provider store={store}>

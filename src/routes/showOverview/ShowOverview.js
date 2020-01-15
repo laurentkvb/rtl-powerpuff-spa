@@ -8,22 +8,24 @@ import { RichText } from '../../components/richText/RichText';
 export const ShowOverview = () => {
   const show = useSelector(state => state.show);
 
-  console.log('show');
-  console.log(show);
-  console.log(show.image);
   if (show) {
     return (
       <div className="show-overview">
-
-             <h1>{show.name}</h1>
-
-
         <div className="show-overview__description">
+          <div className="show-overview__description-image">
+            <img alt={show.name} src={show.image} />
+          </div>
 
-          <RichText text={show.summary} variant="small"/>
-            <img alt={show.name} src={show.image}/>
-
+          <div className="show-overview__description-text">
+            <h1>{show.name}</h1>
+            <RichText text={show.summary} variant="small" />
+          </div>
         </div>
+
+        <h1>Episodes list</h1>
+
+        {/*<hr/>*/}
+        <div className="horizontal-line" />
 
         <div className="show-overview__box">
           {show &&
